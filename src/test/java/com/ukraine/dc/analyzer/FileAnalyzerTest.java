@@ -1,7 +1,5 @@
 package com.ukraine.dc.analyzer;
 
-import com.ukraine.dc.analyzer.FileAnalyzer;
-import com.ukraine.dc.analyzer.FileInformation;
 import org.junit.jupiter.api.*;
 
 import java.util.List;
@@ -17,7 +15,7 @@ class FileAnalyzerTest {
             "He said hello.\n" +
             "How are you? Hello, fine.\n" +
             "\n" +
-            "Привет, как дела? hello, i'm fine.\n" +
+            "hello, i'm fine.\n" +
             "test.\n" +
             "?!\n" +
             "hello.     HELLOhello!\n" +

@@ -1,6 +1,5 @@
 # Project exclude paths
 /target/
-/.idea
 data_structures.iml
 pom.xml.tag
 pom.xml.releaseBackup

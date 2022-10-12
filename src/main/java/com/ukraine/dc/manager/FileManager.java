@@ -98,8 +98,8 @@ public final class FileManager {
     }
 
     private static void copyFileContent(File sourcePath, File destination) {
-        try (InputStream inputStream = new BufferedInputStream(new FileInputStream(sourcePath));
-             OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(destination))) {
+        try (InputStream inputStream = new FileInputStream(sourcePath);
+             OutputStream outputStream = new FileOutputStream(destination)) {
             int count;
             byte[] buffer = new byte[512];
             while ((count = inputStream.read(buffer)) != -1) {
@@ -152,7 +152,7 @@ public final class FileManager {
         return counter;
     }
 
-    private static void deleteFiles(File file) {
+    public static void deleteFiles(File file) {
         if (file.isFile()) {
             file.delete();
         } else {

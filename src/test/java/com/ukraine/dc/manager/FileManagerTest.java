@@ -146,9 +146,9 @@ class FileManagerTest {
 
     private String readContentByPath(String path) {
         StringBuilder builder = new StringBuilder();
-        try (InputStream inputStream = new BufferedInputStream(new FileInputStream(path))) {
+        try (InputStream inputStream = new FileInputStream(path)) {
             int count;
-            byte[] buffer = new byte[64];
+            byte[] buffer = new byte[16000];
             while ((count = inputStream.read(buffer)) != -1) {
                 builder.append(new String(buffer, 0, count));
             }
